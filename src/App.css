@@ -1,38 +1,647 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    transition-duration: 1s;
+    z-index: 1;
+    -webkit-box-shadow: 0px 5px 0px 0px rgba(255,0,0,0.2);
+    -moz-box-shadow: 0px 5px 0px 0px rgba(255,0,0,0.2);
+    box-shadow: 0px 5px 0px 0px rgba(255,0,0,0.2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav a {
+    color: red;
+    text-decoration: none;
+    font-size: 30px;
+    transition-duration: 1s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#logo-white{
+    display: none;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-brand {
+    width: 60%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-brand img {
+    width: 10%;
+}
+
+.nav-menu {
+    width: 40%;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.nav-menu ul li a{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hero{
+    width: 100%;
+    margin-top: 50px;
+    padding: 0 0;
+    align-items: center;
+    background-image: url("../public/assets/CVLogoWhiteTransparent.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: red;
+}
+
+.hero-text{
+    width: 100%;
+    margin-top: 80px;
+    padding: 50px;
+    text-align: center;
+}
+
+.hero-text h1{
+    font-size: 50px;
+    padding-bottom: 20px;
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.hero-text p{
+    font-size: 25px;
+    padding-bottom: 40px;
+    color: white;
+}
+
+.hero-text a{
+    width: 40%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: white;
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    border: 5px solid white;
+    transition-duration: 1s;
+}
+
+.hero-text a:hover{
+    background: red;
+    color: white;
+    transition-duration: 1s;
+}
+
+.hero-content{
+    padding: 0px 50px 50px 50px;
+    width: 100%;
+}
+
+.hero-content p{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.skill-intro, .project-intro, .experience-intro{
+    padding: 50px 50px;
+    text-align: center;
+    background: white;
+}
+
+.skill-intro h1, .project-intro h1, .experience-intro h1{
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 40px;
+}
+
+.skill-section, .project-section, .experience-section{
+    text-align: justify;
+    background-image: url("../public/assets/CVLogoWhiteTransparent.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: red;
+}
+
+.skill-subsection, .project-subsection{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.experience-subsection{
+    width: 100%;
+}
+
+.experience-section hr{
+    background: white;
+    border: 5px solid white;
+}
+
+.experience-organization-section, .experience-education-section{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.experience-organization-title, .experience-education-title{
+    width: 25%;
+    cursor: pointer;
+}
+
+.experience-organization-title h1, .experience-education-title h1{
+    color: white;
+    padding: 50px 30px;
+}
+
+.experience-organization-content, .experience-education-content{
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.project-box{
+    width: 100%;
+    background: white;
+    padding: 20px;
+    margin: 20px 200px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.project-box img{
+    width: 90%;
+    border-radius: 20px;
+    transition-duration: 1s;
+}
+
+.project-box img:hover{
+    opacity: 0.7;
+    transition-duration: 1s;
+}
+
+.project-box-link{
+    width: 20%;
+    border-radius: 20px;
+    background: red;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+.project-box-link a{
+    color: white;
+    text-decoration: none;
+}
+
+.project-box-link:hover{
+    background: black;
+    transition-duration: 1s;
+}
+
+.experience-box{
+    width: 40%;
+    background: white;
+    padding: 20px 20px;
+    margin: 20px 0;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.experience-box h1, .project-box h1{
+    font-size: 25px;
+    color: red;
+}
+
+.experience-box p, .project-box p{
+    margin: 5px 0;
+    font-size: 15px;
+    color: red;
+}
+
+.experience-job{
+    font-weight: bold;
+}
+
+.contact-section{
+    text-align: justify;
+    background-image: url("../public/assets/CVLogoTransparent.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: white;
+}
+
+.contact-subsection{
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+.contact-intro{
+    padding: 50px 50px;
+    text-align: center;
+}
+
+.contact-intro h1{
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 40px;
+}
+
+.socialmedia-list{
+    width: 30%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.socialmedia-list img{
+    width: 80%;
+    transition-duration: 1s;
+}
+
+.socialmedia-list img:hover{
+    opacity: 0.5;
+    transition-duration: 1s;
+}
+
+.footer-section{
+    background: red;
+}
+
+.footer-section p{
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 5px 0;
+}
+/*
+    MOBILE PHONE
+*/
+
+@media only screen and (max-width: 768px){
+    .nav{
+        top: 0;
+        width: 100%;
+        display: inline-block;
+        position: -webkit-sticky;
+        position: sticky;
+        padding: 20px;
+        background: white;
+        border-bottom: 5px solid red;
+    }
+    .nav-brand{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .nav-brand img{
+        width: 15%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    #logo-red{
+        display: block;
+    }
+    #logo-white{
+        display: none;
+    }
+    .nav-menu{
+        width: 100%;
+    }
+    .nav-menu ul li{
+        text-align: center;
+    }
+    .nav-menu ul li a{
+        font-size: 15px;
+        color: red;
+    }
+    .hero{
+        margin-top: 0;
+    }
+    .hero-section{
+        width: 100%;
+        padding: 0;
+        margin-top: 0;
+    }
+    .hero-text{
+        width: 100%;
+        padding: 20px 0;
+        margin: 0;
+        text-align: center;
+    }
+    .hero-text h1{
+        font-size: 30px;
+    }
+    .hero-text p{
+        font-size: 15px;
+    }
+    .hero-text a{
+        padding: 5px 10px;
+        font-size: 20px;
+    }
+    .socialmedia-list{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .socialmedia-list img{
+        width: 70%;
+    }
+    .hero-content{
+        padding: 20px;
+    }
+    .hero-content h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    .hero-content p{
+        font-size: 15px;
+        color: white;
+        text-align: center;
+    }
+    .project-intro, .experience-intro{
+        padding: 0;
+        text-align: center;
+        background: white;
+    }
+    .project-intro h1, .experience-intro h1{
+        color: red;
+        font-weight: bold;
+        font-size: 25px;
+        padding: 20px 0;
+    }
+    .project-subsection{
+        display: inline-block;
+        width: 100%;
+        padding: 0 10px;
+    }
+    .experience-subsection{
+        width: 100%;
+    }
+    .experience-section hr{
+        display: none;
+    }
+    .experience-organization-section, .experience-education-section{
+        display: inline-block;
+        width: 100%;
+        align-items: center;
+        padding: 0 10px;
+    }
+    .experience-organization-title, .experience-education-title{
+        width: 100%;
+    }
+    .experience-organization-title h1, .experience-education-title h1{
+        color: white;
+        padding: 0;
+        margin-top: 10px;
+        text-align: center;
+        font-size: 25px;
+    }
+    .experience-organization-content, .experience-education-content{
+        width: 100%;
+        display: inline-block;
+    }
+    .experience-box, .project-box{
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 10px;
+    }
+    .project-box-link{
+        width: 50%;
+        border-radius: 20px;
+        background: red;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        cursor: pointer;
+        transition-duration: 1s;
+    }
+    .experience-box h1, .project-box h1{
+        font-size: 20px;
+    }
+    .experience-box p, .project-box p{
+        margin: 5px 0;
+        font-size: 15px;
+    }
+    .contact-section{
+        padding: 0;
+        background: none;
+    }
+    .contact-section h1{
+        padding: 20px 0;
+        font-size: 25px;
+    }
+}
+
+/*
+    TABLET
+*/
+
+@media only screen and (min-width: 769px) and (max-width:1199px){
+    .nav{
+        top: 0;
+        width: 100%;
+        display: inline-block;
+        position: sticky;
+        padding: 20px;
+        background: white;
+        border-bottom: 5px solid red;
+    }
+    .nav-brand{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .nav-brand img{
+        width: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    #logo-red{
+        display: block;
+    }
+    #logo-white{
+        display: none;
+    }
+    .nav-menu{
+        width: 100%;
+    }
+    .nav-menu ul li{
+        text-align: center;
+    }
+    .nav-menu ul li a{
+        font-size: 20px;
+        color: red;
+    }
+    .hero-section{
+        width: 100%;
+        padding: 0;
+        margin-top: 0;
+    }
+    .hero-image{
+        width: 35%;
+    }
+    .hero-text{
+        width: 65%;
+        padding: 20px 0;
+        margin-left: 40px;
+    }
+    .hero-text h1{
+        font-size: 30px;
+    }
+    .hero-text p{
+        font-size: 15px;
+    }
+    .socialmedia-list{
+        width: 55%;
+        border: 2px solid red;
+    }
+    .socialmedia-list img{
+        width: 65%;
+    }
+    .hero-content{
+        padding: 20px;
+    }
+    .hero-content h1{
+        font-size: 30px;
+    }
+    .hero-content p{
+        font-size: 15px;
+        color: white;
+    }
+    .cv-home-button{
+        font-size: 15px;
+        display: block;
+        padding: 10px;
+        border: 2px solid white;
+    }
+    .skill-intro, .project-intro, .experience-intro{
+        padding: 0;
+        text-align: center;
+        background: white;
+    }
+    .skill-intro h1, .project-intro h1, .experience-intro h1{
+        color: red;
+        font-weight: bold;
+        font-size: 25px;
+        padding: 20px 0;
+    }
+    .skill-subsection, .project-subsection{
+        display: inline-block;
+        width: 100%;
+        padding: 0 10px;
+    }
+    .experience-subsection{
+        width: 100%;
+    }
+    .experience-section hr{
+        display: none;
+    }
+    .experience-organization-section, .experience-education-section{
+        display: inline-block;
+        width: 100%;
+        align-items: center;
+        padding: 0 10px;
+    }
+    .experience-organization-title, .experience-education-title{
+        width: 100%;
+    }
+    .experience-organization-title h1, .experience-education-title h1{
+        color: white;
+        padding: 0;
+        margin-top: 10px;
+        text-align: center;
+        font-size: 25px;
+    }
+    .experience-organization-content, .experience-education-content{
+        width: 100%;
+        display: inline-block;
+    }
+    .experience-box, .project-box{
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 10px;
+    }
+    .skill-box{
+        width: 100%;
+        margin: 20px 0;
+        border-radius: 10px;
+    }
+    .experience-box h1, .project-box h1, .skill-box h1{
+        font-size: 20px;
+    }
+    .experience-box p, .project-box p, .skill-box p{
+        margin: 5px 0;
+        font-size: 15px;
+    }
+    .contact-section{
+        padding: 0;
+    }
+    .contact-section h1{
+        padding: 20px 0;
+        font-size: 25px;
+    }
+    .contact-section p{
+        margin-bottom: 20px;
+    }
+}
+
+/*
+    DESKTOP + ANIMATIONS
+*/
+
+@media only screen and (min-width: 1200px){
+    .nav:hover{
+        background-color: red;
+        transition-duration: 1s;
+        -webkit-box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.2);
+    }
+    .nav a:hover{
+        text-decoration: underline !important;
+        transition-duration: 1s;
+    }
+    .nav:hover .nav-menu ul li a{
+        color: white;
+        transition-duration: 1s;
+    }
+    .nav:hover #logo-red{
+        display: none;
+        transition-duration: 1s;
+    }
+    .nav:hover #logo-white{
+        display: block;
+        transition-duration: 1s;
+    }
 }
