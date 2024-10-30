@@ -2,7 +2,7 @@ import React from "react";
 
 function ExperienceBox(props) {
     return (
-        <div class="text-center bg-red text-white flex flex-col p-8 gap-8 shadow-xl">
+        <div class="text-center bg-red-800 text-white flex flex-col p-8 gap-8 shadow-xl rounded-xl">
                 <div class="text-2xl font-bold">
                     <h1>{props.title}</h1>
                 </div>

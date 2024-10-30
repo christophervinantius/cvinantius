@@ -22,7 +22,7 @@ function Footer() {
     }
 
     return (
-        <div className="bg-red text-white text-lg text-center p-4">
+        <div className="bg-red-800 text-white text-lg text-center p-4">
             <p id="clock"></p>
             <p>Christopher Vinantius - 2024</p>
         </div>

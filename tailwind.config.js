@@ -8,9 +8,6 @@ module.exports = {
       fontFamily: {
         rubik: ['Rubik', 'sans-serif'],
       },
-      colors: {
-        'red': '#FF0000'
-      },
     },
   },
   plugins: [],

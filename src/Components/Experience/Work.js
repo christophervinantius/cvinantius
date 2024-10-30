@@ -17,14 +17,9 @@ function Work() {
     });
 
     return (
-            <div className="flex flex-col items-center justify-center">
-                <div className="text-2xl font-bold text-red pb-4">
-                    <h1 className="underline">Work</h1>
-                </div>
-                <div className="flex flex-col items-center justify-between gap-8">
-                    {workList}
-                </div>
-            </div>
+        <div className="flex flex-col items-center justify-between gap-8">
+            {workList}
+        </div>
     );
 }
 
