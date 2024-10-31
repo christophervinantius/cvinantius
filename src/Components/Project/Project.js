@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import ProjectBox from "./ProjectBox.js";
 
 function Project() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const nextProject = () => {
+        setCurrentIndex((prevIndex) => (prevIndex === projects.length - 1 ? 0 : prevIndex + 1));
+    };
+
+    const prevProject = () => {
+        setCurrentIndex((prevIndex) => (prevIndex === 0 ? projects.length - 1 : prevIndex - 1));
+    };
 
     const projects = [
         {
@@ -17,41 +26,27 @@ function Project() {
             title: "BobaFest",
             content: "BobaFest is a fictional event that showcases some of the latest technologies from various well-known companies in Indonesia. This project was done individually by using HTML, CSS, and JavaScript, jQuery, and Bootstrap.",
             href: "https://github.com/christophervinantius/BobaFest"
-        },
-        // {
-        //     image: "../assets/Projects/BluejackGames.png",
-        //     alt: "BlueJack Games",
-        //     title: "BlueJack Games",
-        //     content: "BlueJack Games is a fictional simple mobile application - as a theme for my final group project of User Experience college course. I was responsible for implementing the application design into the form of an Android application by using Java and Android Studio.",
-        //     href: "https://github.com/christophervinantius/BluejackGames"
-        // },
-        // {
-        //     image: "",
-        //     alt: "Recycon",
-        //     title: "Recycon",
-        //     content: "Recycon is a fictional web application - as a theme for my final group project of Web Programming college course. This web application was finished using Laravel, a framework of PHP.",
-        //     href: "https://github.com/christophervinantius/Recycon"
-        // },
-        // {
-        //     image: "",
-        //     alt: "MyBlog",
-        //     title: "MyBlog",
-        //     content: "MyBlog is a fictional web application - as a theme for my final group project of Web Programming college course. This web application was finished using Next.js, a framework of React.js.",
-        //     href: "https://github.com/christophervinantius/Recycon"
-        // }
+        }
     ]
 
-    const projectList = projects.map((project) => {
-        return <ProjectBox image={project.image} alt={project.alt} title={project.title} content={project.content} href={project.href} />
-    });
-
     return (
-        <div id="project-section" className="pt-4 pb-8 px-8 flex flex-col items-center justify-center gap-4">
+        <div id="project-section" className="pt-4 pb-8 flex flex-col items-center justify-center gap-4">
             <div className="text-3xl font-bold text-red-800">
-                <h1>My Projects</h1>
+                <h1>Projects</h1>
             </div>
-            <div className="flex flex-col items-center justify-between gap-8">
-                {projectList}
+            <div className="relative w-full flex flex-col items-center">
+                <ProjectBox
+                    image={projects[currentIndex].image}
+                    alt={projects[currentIndex].alt}
+                    title={projects[currentIndex].title}
+                    content={projects[currentIndex].content}
+                    href={projects[currentIndex].href}
+                />
+
+                <div className="mt-4 flex w-4/5 md:w-1/6 justify-between">
+                    <button onClick={prevProject} className="px-6 py-2 text-lg bg-red-800 text-white hover:bg-white hover:text-red-800 border-3 hover:border-red-800 transition duration-500 ease-in-out rounded-xl">Previous</button>
+                    <button onClick={nextProject} className="px-6 py-2 text-lg bg-red-800 text-white hover:bg-white hover:text-red-800 border-3 hover:border-red-800 transition duration-500 ease-in-out rounded-xl">Next</button>
+                </div>
             </div>
         </div>
     );

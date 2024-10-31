@@ -31,12 +31,12 @@ const links = [
     }); 
 
     return (
-        <div id="contact-section" className="pt-8 pb-4 flex flex-col items-center justify-center gap-4">
+        <div id="contact-section" className="py-8 flex flex-col items-center justify-center gap-4">
             <div className="text-3xl text-red-800 font-bold">
                 <h1>Contact Me</h1>
             </div>
             <div className="">
-                <div className="flex items-center justify-center gap-8">{linksList}</div>
+                <div className="flex items-center justify-center gap-6 md:gap-12">{linksList}</div>
             </div>
         </div>
     );
