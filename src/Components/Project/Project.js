@@ -14,6 +14,14 @@ function Project() {
 
     const projects = [
         {
+            image: "../assets/Projects/WeTrack.png",
+            alt: "WeTrack",
+            title: "WeTrack",
+            content: "WeTrack is a task management web application that has ChatGPT integration as its core feature. This project was done in a group of three by using Next.js, Tailwind CSS, and Google Firebase.",
+            href: "https://github.com/ervin-sungkono/WeTrack-App",
+            hrefDemo: "https://wetrack-app.vercel.app/"
+        },
+        {
             image: "../assets/Projects/LaForant.png",
             alt: "LaForant",
             title: "LaForant",
@@ -26,7 +34,7 @@ function Project() {
             title: "BobaFest",
             content: "BobaFest is a fictional event that showcases some of the latest technologies from various well-known companies in Indonesia. This project was done individually by using HTML, CSS, and JavaScript, jQuery, and Bootstrap.",
             href: "https://github.com/christophervinantius/BobaFest"
-        }
+        },
     ]
 
     return (
@@ -41,6 +49,7 @@ function Project() {
                     title={projects[currentIndex].title}
                     content={projects[currentIndex].content}
                     href={projects[currentIndex].href}
+                    hrefDemo={projects[currentIndex].hrefDemo}
                 />
 
                 <div className="mt-4 flex w-4/5 md:w-1/6 justify-between">

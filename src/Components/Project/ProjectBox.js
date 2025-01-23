@@ -13,9 +13,13 @@ function ProjectBox(props) {
                 <div className="text-sm md:text-md text-white">
                     <p>{props.content}</p>
                 </div>
+                {props.hrefDemo && (
+                    <a className="text-sm md:text-md font-light px-8 py-2 bg-red-800 text-white hover:bg-white hover:text-red-800 transition duration-500 ease-in-out rounded-xl border-2 border-white" href={props.hrefDemo} target="_blank" rel="noreferrer">Go to live demo</a>
+                )}
                 <a className="text-sm md:text-md font-light px-8 py-2 bg-red-800 text-white hover:bg-white hover:text-red-800 transition duration-500 ease-in-out rounded-xl border-2 border-white" href={props.href} target="_blank" rel="noreferrer">Go to repository</a>
             </div>
         </div>
+        
     );
 }
 
