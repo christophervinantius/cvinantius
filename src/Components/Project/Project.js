@@ -32,7 +32,7 @@ function Project() {
             image: "../assets/Projects/BobaFest.png",
             alt: "BobaFest",
             title: "BobaFest",
-            content: "BobaFest is a fictional event that showcases some of the latest technologies from various well-known companies in Indonesia. This project was done individually by using HTML, CSS, and JavaScript, jQuery, and Bootstrap.",
+            content: "BobaFest is a fictional event that showcases some of the latest technologies from various well-known companies in Indonesia. This project was done individually by using HTML, CSS, JavaScript, jQuery, and Bootstrap.",
             href: "https://github.com/christophervinantius/BobaFest"
         },
     ]
