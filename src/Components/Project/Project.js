@@ -14,6 +14,14 @@ function Project() {
 
     const projects = [
         {
+            image: "../assets/Projects/IDSimRacing.png",
+            alt: "Indonesia Sim Racing",
+            title: "Indonesia Sim Racing",
+            content: "Indonesia Sim Racing is an interactive website showing the racing calendar of Indonesian sim racing communities. This project was done individually by using Nuxt, Tailwind CSS, and Supabase.",
+            href: "https://github.com/christophervinantius/idsimracing",
+            hrefDemo: "https://idsimracing.vercel.app/"
+        },
+        {
             image: "../assets/Projects/WeTrack.png",
             alt: "WeTrack",
             title: "WeTrack",
