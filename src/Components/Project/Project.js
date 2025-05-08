@@ -17,9 +17,9 @@ function Project() {
             image: "../assets/Projects/IDSimRacing.png",
             alt: "Indonesia Sim Racing",
             title: "Indonesia Sim Racing",
-            content: "Indonesia Sim Racing is an interactive website showing the racing calendar of Indonesian sim racing communities. This project was done individually by using Nuxt, Tailwind CSS, and Supabase.",
+            content: "Indonesia Sim Racing is an interactive website displaying the racing calendar of Indonesian sim racing communities. This project was done individually by using Nuxt.js, Tailwind CSS, and Supabase.",
             href: "https://github.com/christophervinantius/idsimracing",
-            hrefDemo: "https://idsimracing.vercel.app/"
+            hrefDemo: "https://idsimracing.pages.dev/"
         },
         {
             image: "../assets/Projects/WeTrack.png",
@@ -29,20 +29,20 @@ function Project() {
             href: "https://github.com/ervin-sungkono/WeTrack-App",
             hrefDemo: "https://wetrack-app.vercel.app/"
         },
-        {
-            image: "../assets/Projects/LaForant.png",
-            alt: "LaForant",
-            title: "LaForant",
-            content: "LaForant is a fictional First Person Shooter game project. Collaborated in a team of 2 developers, I implemented the web design into a website by using HTML, CSS, JavaScript, jQuery, and Bootstrap.",
-            href: "https://github.com/christophervinantius/LaForant"
-        },
-        {
-            image: "../assets/Projects/BobaFest.png",
-            alt: "BobaFest",
-            title: "BobaFest",
-            content: "BobaFest is a fictional event that showcases some of the latest technologies from various well-known companies in Indonesia. This project was done individually by using HTML, CSS, JavaScript, jQuery, and Bootstrap.",
-            href: "https://github.com/christophervinantius/BobaFest"
-        },
+        // {
+        //     image: "../assets/Projects/LaForant.png",
+        //     alt: "LaForant",
+        //     title: "LaForant",
+        //     content: "LaForant is a fictional First Person Shooter game project. Collaborated in a team of 2 developers, I implemented the web design into a website by using HTML, CSS, JavaScript, jQuery, and Bootstrap.",
+        //     href: "https://github.com/christophervinantius/LaForant"
+        // },
+        // {
+        //     image: "../assets/Projects/BobaFest.png",
+        //     alt: "BobaFest",
+        //     title: "BobaFest",
+        //     content: "BobaFest is a fictional event that showcases some of the latest technologies from various well-known companies in Indonesia. This project was done individually by using HTML, CSS, JavaScript, jQuery, and Bootstrap.",
+        //     href: "https://github.com/christophervinantius/BobaFest"
+        // },
     ]
 
     return (
