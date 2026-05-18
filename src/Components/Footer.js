@@ -2,6 +2,8 @@ import React from "react";
 
 function Footer() {
 
+    const currentYear = new Date().getFullYear();
+
     setInterval(showClock, 1000);
 
     function showClock() {
@@ -24,7 +26,7 @@ function Footer() {
     return (
         <div className="bg-red-800 text-white text-lg text-center p-4">
             <p id="clock"></p>
-            <p>Christopher Vinantius - 2025</p>
+            <p>Christopher Vinantius - {currentYear}</p>
         </div>
     );
 }
